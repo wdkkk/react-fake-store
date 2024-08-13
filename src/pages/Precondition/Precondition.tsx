@@ -61,7 +61,7 @@ const Precondition = () => {
               <Button
                 onClick={() => {
                   dispatch(preconditionSlice.actions.check());
-                  navigate("/login");
+                  navigate("/");
                 }}
               >
                 Далее

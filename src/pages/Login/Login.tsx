@@ -41,7 +41,7 @@ const Login = () => {
           dispatch(authenficationSlice.actions.auth(token));
 
           setIsLoading(false);
-          navigate("/");
+          navigate("/precondition");
         })
         .catch(() => {
           setIsLoading(false);

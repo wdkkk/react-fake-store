@@ -17,8 +17,8 @@ const Cart = () => {
   return (
     <div className={s.wrapper}>
       <>
-        {cartData.products.map((product) => (
-          <CartProductCard key={product.id} product={product} />
+        {cartData.products.map((product, index) => (
+          <CartProductCard index={index} key={product.id} product={product} />
         ))}
       </>
     </div>

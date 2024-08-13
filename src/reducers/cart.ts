@@ -11,6 +11,12 @@ export const cartSlice = createSlice({
     addProduct(state, action: {payload: {product: Product, price: number}}) {
       state.products = [...state.products, action.payload.product]
       state.totalPrice = state.totalPrice + action.payload.price 
+    },
+    removeProduct(state, action) {
+      state.totalPrice = state.totalPrice - action.payload.price
+      const tempArr = state.products
+      tempArr.splice(action.payload.index, 1)
+      state.products = [...tempArr]
     }
   }
 })
