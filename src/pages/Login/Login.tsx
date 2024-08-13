@@ -80,7 +80,7 @@ const Login = () => {
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           setUsername(e.target.value)
         }
-        value="mor_2314"
+        value={username}
         placeholder="Username"
         style={{ textAlign: "center", marginBottom: "25px" }}
       />
@@ -90,7 +90,7 @@ const Login = () => {
         }
         placeholder="Password"
         type="password"
-        value="83r5^_"
+        value={password}
         style={{ textAlign: "center", marginBottom: "35px" }}
       />
       <Button onClick={() => authenficate(username, password)}>Login</Button>

@@ -3,7 +3,7 @@
 ### Dev Roadmap
 
 - [ ] skeleton loading
-- [ ] memo on Main
+- [x] memo on Main
 - [ ] breakpoints for carousels
 - [ ] mobile version
 - [ ] cart
