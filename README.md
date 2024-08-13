@@ -3,9 +3,9 @@
 ### Dev Roadmap
 
 - [x] skeleton loading
+- [ ] cart
 - [ ] memo on Main
 - [ ] breakpoints for carousels
-- [ ] mobile version
-- [ ] cart
 - [ ] user data edit
 - [ ] useFetching hook
+- [ ] mobile version

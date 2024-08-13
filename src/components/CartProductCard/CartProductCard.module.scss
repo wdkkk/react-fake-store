@@ -1,0 +1,51 @@
+.wrapper {
+  border: 5px solid #9381FF;
+  margin-top: 40px;
+
+  padding: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .text {
+    width: 80%;
+  }
+
+  .img {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .deleteButton {
+    padding-right: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+
+    .deleteButtonElement {
+      width: 3px;
+      height: 30px;
+      background-color: #000;
+    }
+    .deleteButtonElement:first-child {
+      position: relative;
+      left: 10px;
+      top: 15px;
+      transform: rotate(45deg);
+    }
+    .deleteButtonElement:last-child {
+      position: relative;
+      left: 10px;
+      bottom: 15px;
+      transform: rotate(-45deg);
+    }
+  }
+}

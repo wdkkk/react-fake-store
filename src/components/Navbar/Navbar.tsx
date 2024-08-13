@@ -17,6 +17,14 @@ const Navbar = () => {
           className={({ isActive, isPending }) =>
             isPending ? s.pending : isActive ? s.active : ""
           }
+          to="/cart"
+        >
+          Cart
+        </NavLink>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? s.pending : isActive ? s.active : ""
+          }
           to="/user"
         >
           Account

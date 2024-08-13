@@ -7,7 +7,6 @@ type Props = {
 };
 
 const Alert = ({ type, children }: Props) => {
-  console.log(s.alert);
   return (
     <div className={s.wrapper}>
       {type === "Default" ? (

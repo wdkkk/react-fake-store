@@ -42,7 +42,13 @@ export type AuthenficationState = {
   token: string
 }
 
+export type CartSliceReducer = {
+  products: Product[],
+  totalPrice: number
+}
+
 export type State = {
   authenficationSliceReducer: AuthenficationState,
   preconditionSliceReducer: PreconditionState
+  cartSliceReducer: CartSliceReducer
 };

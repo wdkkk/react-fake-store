@@ -5,8 +5,10 @@ import Button from "../UI/Button/Button";
 import "react-loading-skeleton/dist/skeleton.css";
 
 import { useNavigate } from "react-router";
+import { useDispatch } from "react-redux";
 
 import Skeleton from "react-loading-skeleton";
+import { cartSlice } from "../../reducers/cart";
 
 type Props = {
   product: Product;
@@ -15,6 +17,7 @@ type Props = {
 
 const ProductCard = (props: Props) => {
   const navigate = useNavigate();
+  const dispatcher = useDispatch();
 
   return (
     <>
@@ -45,7 +48,11 @@ const ProductCard = (props: Props) => {
             <Button
               onClick={(e) => {
                 if (e) e.stopPropagation();
-                console.log("@click");
+                const cartObject = {
+                  product: props.product,
+                  price: props.product.price,
+                };
+                dispatcher(cartSlice.actions.addProduct(cartObject));
               }}
             >
               {props.product.price}$

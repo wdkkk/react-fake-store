@@ -6,6 +6,7 @@ import Precondition from "../pages/Precondition/Precondition.tsx";
 import Main from "../pages/Main/Main.tsx";
 import App from "../App.tsx";
 import Account from "../pages/Account/Account.tsx";
+import Cart from "../pages/Cart/Cart.tsx";
 
 const user = {
   address: {
@@ -44,6 +45,10 @@ export const router = createBrowserRouter([
       {
         path: "user",
         element: <Account user={user} />,
+      },
+      {
+        path: "cart",
+        element: <Cart />,
       },
     ],
   },
