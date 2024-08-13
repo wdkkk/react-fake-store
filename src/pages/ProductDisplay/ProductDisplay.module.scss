@@ -1,0 +1,45 @@
+.wrapper {
+  width: 100%;
+  padding-top: 200px;
+  font-family: 'Segoe UI', sans-serif;
+
+  .row  {
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+
+    .backButton {
+      position: absolute;
+      top: 150px;
+    }
+
+    .image {
+      width: 400px;
+
+      img {
+        width: 100%;
+        user-select: none;
+        pointer-events: none;
+      }
+    }
+
+    .text {
+      width: 900px;
+      padding-top: 150px;
+
+      .title {
+        font-size: 50px;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+      .desc {
+        font-size: 30px;
+      }
+      .buttonWrapper {
+        padding-top: 50px;
+        display: flex;
+        justify-content: flex-start;
+      }
+    }
+  }
+}

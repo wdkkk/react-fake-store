@@ -1,0 +1,24 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  padding-top: 35px;
+
+  .alert {
+    color: #fff;
+    font-size: 26px;
+    padding: 20px;
+    width: 1440px;
+    border-radius: 8px;
+    position: absolute;
+  }
+  
+  .default {
+    background-color: #9381ff;
+  }
+  .error {
+    background-color: rgb(253, 61, 61);
+  }
+}

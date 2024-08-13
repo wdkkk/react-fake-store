@@ -1,0 +1,38 @@
+.wrapper {
+  width: 200px;
+  height: 300px;
+  border: 2px solid #9381FF;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+
+  .title {
+    user-select: none;
+    max-height: 68px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .img {
+    height: 133px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+
+    img {
+      height: 100%;
+      max-width: 100%;
+      pointer-events: none;
+      user-select: none;
+    }
+  }
+
+  .buttonWrapper {
+    padding-top: 20px;
+  }
+}

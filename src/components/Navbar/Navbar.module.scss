@@ -1,0 +1,28 @@
+.wrapper {
+  background-color: #9381FF;
+
+  .linkRow {
+    width: 1440px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 15px 0;
+
+    font-size: 30px;
+    font-weight: 300;
+
+    a {
+      text-decoration: none;
+      color: #cacaca;
+       
+      &.active {
+        color: #fff;
+       }
+       
+    }
+    
+  }
+}

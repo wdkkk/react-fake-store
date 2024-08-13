@@ -1,0 +1,35 @@
+.wrapper {
+  padding-top: 50px;
+
+  .langButton {
+    margin-bottom: 40px;
+  }
+
+  .text {
+    .title {
+      text-align: center;
+      font-size: 50px;
+      text-transform: uppercase;
+      margin-bottom: 45px;
+    }
+
+    .contentText {
+      font-size: 38px;
+      font-weight: 300;
+
+
+      a {
+        color:  #9381ff;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color:  #c3b8ff;;
+        }
+      }
+    }
+
+    .contentButtonWrapper {
+      padding-top: 100px;
+    }
+  }
+}
