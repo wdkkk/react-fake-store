@@ -12,6 +12,7 @@ export const authenficationSlice = createSlice({
       state.token = action.payload
     },
     logout(state) {
+      state.token = ""
       state.authenficated = false
     }
   }

@@ -1,17 +1,23 @@
 import { useEffect, useState } from "react";
 import s from "./ProductDisplay.module.scss";
 
+import Loading from "../../components/UI/Loading/Loading";
 import Button from "../../components/UI/Button/Button";
 
-import { useParams } from "react-router";
-import { Product } from "../../types";
-import Loading from "../../components/UI/Loading/Loading";
 import axios from "axios";
+
+import { Product } from "../../types";
+
 import { useNavigate } from "react-router";
+import { useParams } from "react-router";
+import { useDispatch } from "react-redux";
+import { cartSlice } from "../../reducers/cart";
 
 const ProductDisplay = () => {
-  const params = useParams();
+  const dispatcher = useDispatch();
   const navigate = useNavigate();
+
+  const params = useParams();
   const id = params.id;
 
   const [product, setProduct] = useState<Product>();
@@ -33,7 +39,7 @@ const ProductDisplay = () => {
         <div className={s.wrapper}>
           <div className={s.row}>
             <div className={s.backButton}>
-              <Button onClick={() => navigate(-1)}>← Go back</Button>
+              <Button onClick={() => navigate("/")}>← Go back</Button>
             </div>
             <div className={s.image}>
               <img src={product.image} alt="" />
@@ -44,7 +50,18 @@ const ProductDisplay = () => {
               <div className={s.desc}>{product.description}</div>
 
               <div className={s.buttonWrapper}>
-                <Button onClick={() => {}}>{product.price}$</Button>
+                <Button
+                  onClick={() => {
+                    const cartObject = {
+                      product: product,
+                      price: product.price,
+                    };
+
+                    dispatcher(cartSlice.actions.addProduct(cartObject));
+                  }}
+                >
+                  {product.price}$
+                </Button>
               </div>
             </div>
           </div>
